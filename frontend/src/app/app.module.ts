@@ -11,13 +11,19 @@ import { LoginComponent } from './login/login.component';
 
 //routes
 import { appRoutes } from './routes';
+import { MainviewComponent } from './user/customer/mainview/mainview.component';
+import { ReservationComponent } from './user/customer/mainview/reservation/reservation.component';
+import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     CustomerComponent,
-    LoginComponent
+    LoginComponent,
+    MainviewComponent,
+    ReservationComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
