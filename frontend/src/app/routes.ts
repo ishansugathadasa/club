@@ -4,10 +4,15 @@ import { CustomerComponent } from './user/customer/customer.component';
 import { LoginComponent } from './login/login.component';
 import { MainviewComponent } from './user/customer/mainview/mainview.component';
 import { ReservationComponent } from './user/customer/mainview/reservation/reservation.component';
+import { AdminComponent } from './user/admin/admin.component';
 export const appRoutes: Routes = [
     {
         path: 'customer', component: UserComponent,
         children: [{ path: '', component: CustomerComponent }]
+    },
+    {
+        path: 'admin', component: UserComponent,
+        children: [{ path: '', component: AdminComponent }]
     },
     {
         path: 'login', component: LoginComponent

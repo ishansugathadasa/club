@@ -21,7 +21,7 @@ right: -40px;
 bottom: -40px;
 width: auto;
 height: auto;
-background-image: url(/assets/img/login-background.jpg); /*url(https://images7.alphacoders.com/362/thumb-350-362619.jpg);*/
+background-image: url(/assets/img/main-back.jpg); /*url(https://images7.alphacoders.com/362/thumb-350-362619.jpg);*/
 background-size: cover;
 -webkit-filter: blur(5px);
 z-index: 0;
@@ -67,6 +67,7 @@ height: 150px;
 width: 350px;
 padding: 10px;
 z-index: 2;
+
 }
 
 .login input[type=text]{
@@ -99,11 +100,11 @@ margin-top: 10px;
 .login input[type=button]{
 width: 260px;
 height: 35px;
-background: #fff;
+background: rgba(241, 127, 112, 0.822);
 border: 1px solid #fff;
 cursor: pointer;
 border-radius: 2px;
-color: #a18d6c;
+color: #ffffff;
 font-family: 'Exo', sans-serif;
 font-size: 16px;
 font-weight: 400;

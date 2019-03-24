@@ -15,6 +15,26 @@ import { MainviewComponent } from './user/customer/mainview/mainview.component';
 import { ReservationComponent } from './user/customer/mainview/reservation/reservation.component';
 import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatInputModule,
+  MatSelectModule,
+  MatFormFieldModule,
+  MatGridListModule,
+  MatMenuModule,
+  MatIconModule,
+  MatToolbarModule,
+  MatDatepickerModule,
+  MatSidenavModule
+} from '@angular/material';
+import { FooterComponent } from './shared/footer/footer.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { AdminComponent } from './user/admin/admin.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,15 +43,30 @@ import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.compo
     LoginComponent,
     MainviewComponent,
     ReservationComponent,
-    AboutusComponent
+    AboutusComponent,
+    FooterComponent,
+    NavbarComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule, MatCheckboxModule,
+    MatInputModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatDatepickerModule,
+    MatSidenavModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export class PizzaPartyAppModule { }
