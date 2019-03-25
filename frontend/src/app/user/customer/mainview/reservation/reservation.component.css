@@ -1,5 +1,5 @@
 .example-form {
-  color: white;
+  color: black;
   min-width: 150px;
   max-width: 500px;
   width: 100%;
@@ -16,14 +16,15 @@ td {
 /* ==================================================================== */
 
 html{    
-  background:url("/assets/img/blur-main-back.jpg") no-repeat;
+  /* background:url("/assets/img/blur-main-back.jpg") no-repeat; */
   background-size: cover;
   height:100%;
 }
 
 #form-div {
-	background-color:rgba(247, 170, 82, 0.4);
-	padding-left:35px;
+	/* background-color:rgba(247, 170, 82, 0.4);
+	width: 450px; */
+	/* padding-left:35px;
 	padding-right:35px;
 	padding-top:35px;
 	padding-bottom:50px;
@@ -34,21 +35,5 @@ html{
   margin-top:60px;
 	margin-left: -560px;
   -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-}
-
-#form-div2 {
-	background-color:rgba(247, 159, 58, 0.4);
-	padding-left:35px;
-	padding-right:35px;
-	padding-top:35px;
-	padding-bottom:50px;
-	width: 450px;
-	float: left;
-	left: 50%;
-	position: absolute;
-  margin-top:60px;
-	margin-left: -10px;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
+  -webkit-border-radius: 7px; */
 }

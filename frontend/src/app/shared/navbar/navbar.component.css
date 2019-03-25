@@ -13,3 +13,7 @@ a{
     font-family:"Courier New", Courier, monospace;
     text-decoration: none;
 }
+
+.bg-image{
+    background-image:url("/assets/img/blur-main-back.jpg") no-repeat;
+}

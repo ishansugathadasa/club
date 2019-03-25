@@ -17,6 +17,8 @@ import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.compo
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import {
   MatButtonModule,
   MatCheckboxModule,
@@ -28,7 +30,8 @@ import {
   MatIconModule,
   MatToolbarModule,
   MatDatepickerModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatStepperModule
 } from '@angular/material';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -63,6 +66,9 @@ import { AdminComponent } from './user/admin/admin.component';
     MatToolbarModule,
     MatDatepickerModule,
     MatSidenavModule,
+    FlexLayoutModule,
+    MatStepperModule,
+    MatFormFieldModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
