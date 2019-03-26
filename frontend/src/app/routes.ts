@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { MainviewComponent } from './user/customer/mainview/mainview.component';
 import { ReservationComponent } from './user/customer/mainview/reservation/reservation.component';
 import { AdminComponent } from './user/admin/admin.component';
+import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.component';
 export const appRoutes: Routes = [
     {
         path: 'customer', component: UserComponent,
@@ -24,6 +25,10 @@ export const appRoutes: Routes = [
     },
     {
         path: 'reservation', component: ReservationComponent
+       
+    },
+    {
+        path: 'aboutus', component: AboutusComponent
        
     },
     {

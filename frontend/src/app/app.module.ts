@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
@@ -13,7 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { appRoutes } from './routes';
 import { MainviewComponent } from './user/customer/mainview/mainview.component';
 import { ReservationComponent } from './user/customer/mainview/reservation/reservation.component';
-import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.component';
+// import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -36,6 +36,7 @@ import {
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { AdminComponent } from './user/admin/admin.component';
+import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.component';
 
 
 @NgModule({
@@ -46,17 +47,19 @@ import { AdminComponent } from './user/admin/admin.component';
     LoginComponent,
     MainviewComponent,
     ReservationComponent,
-    AboutusComponent,
+    // AboutusComponent,
     FooterComponent,
     NavbarComponent,
-    AdminComponent
+    AdminComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatCheckboxModule,
+    MatButtonModule, 
+    MatCheckboxModule,
     MatInputModule,
     MatSelectModule,
     MatFormFieldModule,
@@ -69,6 +72,8 @@ import { AdminComponent } from './user/admin/admin.component';
     FlexLayoutModule,
     MatStepperModule,
     MatFormFieldModule,
+    MatStepperModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
