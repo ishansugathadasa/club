@@ -31,12 +31,15 @@ import {
   MatToolbarModule,
   MatDatepickerModule,
   MatSidenavModule,
-  MatStepperModule
+  MatStepperModule,
+  MatRadioModule
 } from '@angular/material';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { AdminComponent } from './user/admin/admin.component';
 import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.component';
+import { CashierComponent } from './user/cashier/cashier.component';
+import { CashierSharedComponent } from './user/cashier/cashier-shared/cashier-shared.component';
 
 
 @NgModule({
@@ -51,7 +54,9 @@ import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.compo
     FooterComponent,
     NavbarComponent,
     AdminComponent,
-    AboutusComponent
+    AboutusComponent,
+    CashierComponent,
+    CashierSharedComponent
   ],
   imports: [
     BrowserModule,
@@ -74,6 +79,7 @@ import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.compo
     MatFormFieldModule,
     MatStepperModule,
     ReactiveFormsModule,
+    MatRadioModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
