@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
@@ -13,9 +13,11 @@ import { LoginComponent } from './login/login.component';
 import { appRoutes } from './routes';
 import { MainviewComponent } from './user/customer/mainview/mainview.component';
 import { ReservationComponent } from './user/customer/mainview/reservation/reservation.component';
-import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.component';
+// import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import {
   MatButtonModule,
@@ -28,11 +30,16 @@ import {
   MatIconModule,
   MatToolbarModule,
   MatDatepickerModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatStepperModule,
+  MatRadioModule
 } from '@angular/material';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { AdminComponent } from './user/admin/admin.component';
+import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.component';
+import { CashierComponent } from './user/cashier/cashier.component';
+import { CashierSharedComponent } from './user/cashier/cashier-shared/cashier-shared.component';
 
 
 @NgModule({
@@ -43,17 +50,21 @@ import { AdminComponent } from './user/admin/admin.component';
     LoginComponent,
     MainviewComponent,
     ReservationComponent,
-    AboutusComponent,
+    // AboutusComponent,
     FooterComponent,
     NavbarComponent,
-    AdminComponent
+    AdminComponent,
+    AboutusComponent,
+    CashierComponent,
+    CashierSharedComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatCheckboxModule,
+    MatButtonModule, 
+    MatCheckboxModule,
     MatInputModule,
     MatSelectModule,
     MatFormFieldModule,
@@ -63,6 +74,12 @@ import { AdminComponent } from './user/admin/admin.component';
     MatToolbarModule,
     MatDatepickerModule,
     MatSidenavModule,
+    FlexLayoutModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    MatRadioModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

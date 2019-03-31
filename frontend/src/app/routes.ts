@@ -5,6 +5,9 @@ import { LoginComponent } from './login/login.component';
 import { MainviewComponent } from './user/customer/mainview/mainview.component';
 import { ReservationComponent } from './user/customer/mainview/reservation/reservation.component';
 import { AdminComponent } from './user/admin/admin.component';
+import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.component';
+import { CashierComponent } from './user/cashier/cashier.component';
+import { ResReservationComponent } from './user/cashier/components/res-reservation/res-reservation.component';
 export const appRoutes: Routes = [
     {
         path: 'customer', component: UserComponent,
@@ -25,6 +28,13 @@ export const appRoutes: Routes = [
     {
         path: 'reservation', component: ReservationComponent
        
+    },
+    {
+        path: 'aboutus', component: AboutusComponent
+       
+    },
+    {
+        path: 'cashier', component: CashierComponent
     },
     {
         path: '', redirectTo: '/login', pathMatch: 'full'
