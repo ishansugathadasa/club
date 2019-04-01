@@ -2,39 +2,46 @@ import { Routes } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { CustomerComponent } from './user/customer/customer.component';
 import { LoginComponent } from './login/login.component';
-import { MainviewComponent } from './user/customer/mainview/mainview.component';
-import { ReservationComponent } from './user/customer/mainview/reservation/reservation.component';
-import { AdminComponent } from './user/admin/admin.component';
-import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.component';
 import { CashierComponent } from './user/cashier/cashier.component';
-import { ResReservationComponent } from './user/cashier/components/res-reservation/res-reservation.component';
+import { ResReservationComponent } from './user/cashier/res-reservation/res-reservation.component';
+import { SportsComponent } from './user/cashier/sports/sports.component';
+import { TableBookingComponent } from './user/cashier/table-booking/table-booking.component';
+import { CustomerIndexComponent } from './user/customer/customer-index/customer-index.component';
+import { AboutUsComponent } from './user/customer/about-us/about-us.component';
+import { GalleryComponent } from './user/customer/gallery/gallery.component';
+import { ReservationComponent } from './user/customer/reservation/reservation.component';
 export const appRoutes: Routes = [
     {
         path: 'customer', component: UserComponent,
         children: [{ path: '', component: CustomerComponent }]
     },
     {
-        path: 'admin', component: UserComponent,
-        children: [{ path: '', component: AdminComponent }]
-    },
-    {
         path: 'login', component: LoginComponent
        
     },
     {
-        path: 'mainview', component: MainviewComponent
-       
+        path: 'cashier', component: CashierComponent
+    },
+    {
+        path: 'customer-index', component: CustomerIndexComponent
+    },
+    {
+        path: 'about-us', component: AboutUsComponent
+    },
+    {
+        path: 'gallery', component: GalleryComponent
     },
     {
         path: 'reservation', component: ReservationComponent
-       
     },
     {
-        path: 'aboutus', component: AboutusComponent
-       
+        path: 'restaurant-reservation', component: ResReservationComponent
     },
     {
-        path: 'cashier', component: CashierComponent
+        path: 'sports', component: SportsComponent
+    },
+    {
+        path: 'table-booking', component: TableBookingComponent
     },
     {
         path: '', redirectTo: '/login', pathMatch: 'full'

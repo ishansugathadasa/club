@@ -11,8 +11,6 @@ import { LoginComponent } from './login/login.component';
 
 //routes
 import { appRoutes } from './routes';
-import { MainviewComponent } from './user/customer/mainview/mainview.component';
-import { ReservationComponent } from './user/customer/mainview/reservation/reservation.component';
 // import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -34,12 +32,26 @@ import {
   MatStepperModule,
   MatRadioModule
 } from '@angular/material';
-import { FooterComponent } from './shared/footer/footer.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { AdminComponent } from './user/admin/admin.component';
-import { AboutusComponent } from './user/customer/mainview/aboutus/aboutus.component';
 import { CashierComponent } from './user/cashier/cashier.component';
-import { CashierSharedComponent } from './user/cashier/cashier-shared/cashier-shared.component';
+import { CustomerIndexComponent } from './user/customer/customer-index/customer-index.component';
+import { AboutUsComponent } from './user/customer/about-us/about-us.component';
+import { ContactUsComponent } from './user/customer/contact-us/contact-us.component';
+import { GalleryComponent } from './user/customer/gallery/gallery.component';
+import { AboutUsContentComponent } from './user/customer/about-us/components/about-us-content/about-us-content.component';
+import { AboutUsHeaderComponent } from './user/customer/about-us/components/about-us-header/about-us-header.component';
+import { ContactBodyComponent } from './user/customer/contact-us/components/contact-body/contact-body.component';
+import { ContactHeaderComponent } from './user/customer/contact-us/components/contact-header/contact-header.component';
+import { ComponentsComponent } from './shared/components/components.component';
+import { IndexNavComponent } from './shared/components/index-nav/index-nav.component';
+import { ReservationComponent } from './user/customer/reservation/reservation.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { IndexServicesComponent } from './user/customer/customer-index/index-services/index-services.component';
+import { IndexHeaderComponent } from './user/customer/customer-index/index-header/index-header.component';
+import { IndexLinksComponent } from './user/customer/customer-index/components/index-links/index-links.component';
+import { BackNavComponent } from './shared/components/back-nav/back-nav.component';
+import { ResReservationComponent } from './user/cashier/res-reservation/res-reservation.component';
+import { SportsComponent } from './user/cashier/sports/sports.component';
+import { TableBookingComponent } from './user/cashier/table-booking/table-booking.component';
 
 
 @NgModule({
@@ -48,15 +60,26 @@ import { CashierSharedComponent } from './user/cashier/cashier-shared/cashier-sh
     UserComponent,
     CustomerComponent,
     LoginComponent,
-    MainviewComponent,
-    ReservationComponent,
-    // AboutusComponent,
-    FooterComponent,
-    NavbarComponent,
-    AdminComponent,
-    AboutusComponent,
     CashierComponent,
-    CashierSharedComponent
+    CustomerIndexComponent,
+    AboutUsComponent,
+    ContactUsComponent,
+    GalleryComponent,
+    AboutUsContentComponent,
+    AboutUsHeaderComponent,
+    ContactBodyComponent,
+    ContactHeaderComponent,
+    ComponentsComponent,
+    IndexNavComponent,
+    FooterComponent,
+    ReservationComponent,
+    IndexServicesComponent,
+    IndexHeaderComponent,
+    IndexLinksComponent,
+    BackNavComponent,
+    ResReservationComponent,
+    SportsComponent,
+    TableBookingComponent
   ],
   imports: [
     BrowserModule,
