@@ -52,6 +52,10 @@ import { BackNavComponent } from './shared/components/back-nav/back-nav.componen
 import { ResReservationComponent } from './user/cashier/res-reservation/res-reservation.component';
 import { SportsComponent } from './user/cashier/sports/sports.component';
 import { TableBookingComponent } from './user/cashier/table-booking/table-booking.component';
+import { PersonalDetailsComponent } from './user/customer/reservation/components/personal-details/personal-details.component';
+import { TableBookComponent } from './user/customer/reservation/components/table-book/table-book.component';
+import { HallBookComponent } from './user/customer/reservation/components/hall-book/hall-book.component';
+import { FoodOrderComponent } from './user/customer/reservation/components/food-order/food-order.component';
 
 
 @NgModule({
@@ -79,7 +83,11 @@ import { TableBookingComponent } from './user/cashier/table-booking/table-bookin
     BackNavComponent,
     ResReservationComponent,
     SportsComponent,
-    TableBookingComponent
+    TableBookingComponent,
+    PersonalDetailsComponent,
+    TableBookComponent,
+    HallBookComponent,
+    FoodOrderComponent
   ],
   imports: [
     BrowserModule,
