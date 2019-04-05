@@ -12,18 +12,19 @@ import { GalleryComponent } from './user/customer/gallery/gallery.component';
 import { ReservationComponent } from './user/customer/reservation/reservation.component';
 export const appRoutes: Routes = [
     {
-        path: 'customer', component: UserComponent,
-        children: [{ path: '', component: CustomerComponent }]
+        path: 'customer', component: CustomerComponent,
+        children: [{ path: '', component: UserComponent }]
     },
     {
-        path: 'login', component: LoginComponent
-       
+        path: 'login', component: LoginComponent,
+        children: [{ path: '', component:  LoginComponent }]
     },
     {
         path: 'cashier', component: CashierComponent
     },
     {
-        path: 'customer-index', component: CustomerIndexComponent
+        path: 'customer-index', component: CustomerIndexComponent,
+        children: [{ path: '', component: CustomerComponent }]
     },
     {
         path: 'about-us', component: AboutUsComponent
