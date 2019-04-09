@@ -56,6 +56,9 @@ import { PersonalDetailsComponent } from './user/customer/reservation/components
 import { TableBookComponent } from './user/customer/reservation/components/table-book/table-book.component';
 import { HallBookComponent } from './user/customer/reservation/components/hall-book/hall-book.component';
 import { FoodOrderComponent } from './user/customer/reservation/components/food-order/food-order.component';
+import { OrderDetailsComponent } from './user/customer/reservation/components/order-details/order-details.component';
+import { SwimmingPoolBookingComponent } from './user/customer/reservation/components/swimming-pool-booking/swimming-pool-booking.component';
+import { CompleteOrderComponent } from './user/customer/reservation/components/complete-order/complete-order.component';
 
 
 @NgModule({
@@ -87,7 +90,10 @@ import { FoodOrderComponent } from './user/customer/reservation/components/food-
     PersonalDetailsComponent,
     TableBookComponent,
     HallBookComponent,
-    FoodOrderComponent
+    FoodOrderComponent,
+    OrderDetailsComponent,
+    SwimmingPoolBookingComponent,
+    CompleteOrderComponent
   ],
   imports: [
     BrowserModule,

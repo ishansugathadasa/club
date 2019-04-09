@@ -1,46 +1,56 @@
-<div id="colorlib-contact">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1 animate-box">
-        <h3>Get In Touch</h3>
-        <form action="#">
-          <div class="row form-group">
-            <div class="col-md-6 padding-bottom">
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" class="form-control" placeholder="Your firstname">
-            </div>
-            <div class="col-md-6">
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" class="form-control" placeholder="Your lastname">
-            </div>
-          </div>
 
-          <div class="row form-group">
-            <div class="col-md-12">
-              <label for="email">Email</label>
-              <input type="text" id="email" class="form-control" placeholder="Your email address">
-            </div>
-          </div>
+<form action="#" >
+  
+    <div class="row form-group">
+      <div class="col-md-2 padding-bottom">
+        <label for="title">Title</label>
+        <!-- <input type="text" id="title" class="form-control" placeholder="Mr."> -->
+        <select name="title" id="title" class="form-control">
+            <option value="#">Mr.</option>
+            <option value="#">Mrs.</option>
+          </select>
+      </div>
 
-          <div class="row form-group">
-            <div class="col-md-12">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
-            </div>
-          </div>
+      <div class="col-md-4 padding-bottom">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" class="form-control" placeholder="Your firstname">
+      </div>
 
-          <div class="row form-group">
-            <div class="col-md-12">
-              <label for="message">Message</label>
-              <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
-            </div>
-          </div>
-          <div class="form-group text-center">
-            <input type="submit" value="Send Message" class="btn btn-primary">
-          </div>
-
-        </form>		
+      <div class="col-md-4">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" class="form-control" placeholder="Your lastname">
       </div>
     </div>
-  </div>
-</div>
+
+    <div class="row form-group">
+      <div class="col-md-6">
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" class="form-control" placeholder="Your phone number">
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-md-10">
+        <label for="email">Email</label>
+        <input type="text" id="email" class="form-control" placeholder="Your email address">
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-md-10">
+        <label for="confirm-email">Confirm email</label>
+        <input type="text" id="confirm-email" class="form-control" placeholder="Re enter your email address">
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-md-10">
+        <label for="note">Note</label>
+        <textarea name="note" id="note" cols="30" rows="3" class="form-control" placeholder="Say something about your special requests"></textarea>
+      </div>
+    </div>
+    <!-- <div class="form-group text-center">
+      <input type="submit" value="Send Message" class="btn btn-primary">
+    </div> -->
+
+</form>	
