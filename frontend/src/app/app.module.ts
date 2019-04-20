@@ -30,7 +30,8 @@ import {
   MatDatepickerModule,
   MatSidenavModule,
   MatStepperModule,
-  MatRadioModule
+  MatRadioModule,
+  MatListModule
 } from '@angular/material';
 import { CashierComponent } from './user/cashier/cashier.component';
 import { CustomerIndexComponent } from './user/customer/customer-index/customer-index.component';
@@ -59,6 +60,7 @@ import { FoodOrderComponent } from './user/customer/reservation/components/food-
 import { OrderDetailsComponent } from './user/customer/reservation/components/order-details/order-details.component';
 import { SwimmingPoolBookingComponent } from './user/customer/reservation/components/swimming-pool-booking/swimming-pool-booking.component';
 import { CompleteOrderComponent } from './user/customer/reservation/components/complete-order/complete-order.component';
+import { MenuComponent } from './user/customer/menu/menu.component';
 
 
 @NgModule({
@@ -93,7 +95,8 @@ import { CompleteOrderComponent } from './user/customer/reservation/components/c
     FoodOrderComponent,
     OrderDetailsComponent,
     SwimmingPoolBookingComponent,
-    CompleteOrderComponent
+    CompleteOrderComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -117,6 +120,7 @@ import { CompleteOrderComponent } from './user/customer/reservation/components/c
     MatStepperModule,
     ReactiveFormsModule,
     MatRadioModule,
+    MatListModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

@@ -10,6 +10,8 @@ import { CustomerIndexComponent } from './user/customer/customer-index/customer-
 import { AboutUsComponent } from './user/customer/about-us/about-us.component';
 import { GalleryComponent } from './user/customer/gallery/gallery.component';
 import { ReservationComponent } from './user/customer/reservation/reservation.component';
+import { MenuComponent } from './user/customer/menu/menu.component';
+
 export const appRoutes: Routes = [
     {
         path: 'customer', component: UserComponent,
@@ -42,6 +44,9 @@ export const appRoutes: Routes = [
     },
     {
         path: 'table-booking', component: TableBookingComponent
+    },
+    {
+        path: 'menu', component: MenuComponent
     },
     {
         path: '', redirectTo: '/login', pathMatch: 'full'
