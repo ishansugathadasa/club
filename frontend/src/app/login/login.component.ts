@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     this.userService.login(form.value).subscribe(
       res => {
         this.userService.setToken(res['token']);
-        this.router.navigateByUrl('/reservation');
+        this.router.navigateByUrl('/instructor');
         alert('sucess');
       },
       err => {

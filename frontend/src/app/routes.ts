@@ -10,10 +10,15 @@ import { CustomerIndexComponent } from './user/customer/customer-index/customer-
 import { AboutUsComponent } from './user/customer/about-us/about-us.component';
 import { GalleryComponent } from './user/customer/gallery/gallery.component';
 import { ReservationComponent } from './user/customer/reservation/reservation.component';
+import { InstructorComponent } from './user/instructor/instructor.component';
 export const appRoutes: Routes = [
     {
         path: 'customer', component: CustomerComponent,
         children: [{ path: '', component: UserComponent }]
+    },
+    {
+        path: 'instructor', component: UserComponent,
+        children: [{ path: '', component: InstructorComponent }]
     },
     {
         path: 'login', component: LoginComponent,

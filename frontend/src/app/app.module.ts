@@ -52,6 +52,8 @@ import { BackNavComponent } from './shared/components/back-nav/back-nav.componen
 import { ResReservationComponent } from './user/cashier/res-reservation/res-reservation.component';
 import { SportsComponent } from './user/cashier/sports/sports.component';
 import { TableBookingComponent } from './user/cashier/table-booking/table-booking.component';
+import { InstructorComponent } from './user/instructor/instructor.component';
+import { InsNavBarComponent } from './user/instructor/component/ins-nav-bar/ins-nav-bar.component';
 
 
 @NgModule({
@@ -79,7 +81,9 @@ import { TableBookingComponent } from './user/cashier/table-booking/table-bookin
     BackNavComponent,
     ResReservationComponent,
     SportsComponent,
-    TableBookingComponent
+    TableBookingComponent,
+    InstructorComponent,
+    InsNavBarComponent
   ],
   imports: [
     BrowserModule,
