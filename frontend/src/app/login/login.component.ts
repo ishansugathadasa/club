@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from "@angular/router";
 import { UserService } from '../shared/user.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -10,12 +11,13 @@ import { UserService } from '../shared/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public userService: UserService,private router : Router) { }
+  constructor(public userService: UserService,private router : Router,public tosatr :ToastrService) { }
   model ={
     email :'',
     password:''
   };
   emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  serverErrorMessages: string;
   ngOnInit() {
   }
   onSubmit(form : NgForm){
@@ -23,11 +25,13 @@ export class LoginComponent implements OnInit {
       res => {
         this.userService.setToken(res['token']);
         this.router.navigateByUrl('/instructor');
-        alert('sucess');
+        this.tosatr.success('Login sucsessfully','Customer');
+        //alert('sucess');
       },
       err => {
-        //this.serverErrorMessages = err.error.message;
-        alert('error');
+        this.serverErrorMessages = err.error.message;
+        this.tosatr.warning(this.serverErrorMessages,'Customer');
+        //alert('error');
       }
     );
   }

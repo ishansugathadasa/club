@@ -11,3 +11,4 @@ mongoose.connect(process.env.MONGODB_URI, (err)=> {
 
 require('./customer');
 require('./user');
+require('./ins_history');

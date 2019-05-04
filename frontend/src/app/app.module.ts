@@ -16,6 +16,9 @@ import { appRoutes } from './routes';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatCardModule} from '@angular/material';
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 import {
   MatButtonModule,
@@ -30,7 +33,8 @@ import {
   MatDatepickerModule,
   MatSidenavModule,
   MatStepperModule,
-  MatRadioModule
+  MatRadioModule,
+  
 } from '@angular/material';
 import { CashierComponent } from './user/cashier/cashier.component';
 import { CustomerIndexComponent } from './user/customer/customer-index/customer-index.component';
@@ -54,6 +58,7 @@ import { SportsComponent } from './user/cashier/sports/sports.component';
 import { TableBookingComponent } from './user/cashier/table-booking/table-booking.component';
 import { InstructorComponent } from './user/instructor/instructor.component';
 import { InsNavBarComponent } from './user/instructor/component/ins-nav-bar/ins-nav-bar.component';
+import { InsHistoryComponent } from './user/instructor/component/ins-history/ins-history.component';
 
 
 @NgModule({
@@ -83,13 +88,15 @@ import { InsNavBarComponent } from './user/instructor/component/ins-nav-bar/ins-
     SportsComponent,
     TableBookingComponent,
     InstructorComponent,
-    InsNavBarComponent
+    InsNavBarComponent,
+    InsHistoryComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     MatButtonModule, 
     MatCheckboxModule,
     MatInputModule,
@@ -107,6 +114,7 @@ import { InsNavBarComponent } from './user/instructor/component/ins-nav-bar/ins-
     MatStepperModule,
     ReactiveFormsModule,
     MatRadioModule,
+    MatCardModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
