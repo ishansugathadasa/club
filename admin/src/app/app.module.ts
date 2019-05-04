@@ -14,7 +14,10 @@ import { SidebarComponent } from './pages/components/sidebar/sidebar.component';
 import { NavbarComponent } from './pages/components/navbar/navbar.component';
 import { BreadcrumbComponent } from './pages/components/breadcrumb/breadcrumb.component';
 
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+// import { MatFileUploadModule } from 'angular-material-fileupload';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { BreadcrumbComponent } from './pages/components/breadcrumb/breadcrumb.co
   ],
   imports: [
     BrowserModule,
+    NoopAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
     RouterModule.forRoot(appRoutes)
   ],
   exports: [RouterModule],
@@ -37,3 +43,4 @@ import { BreadcrumbComponent } from './pages/components/breadcrumb/breadcrumb.co
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export class PizzaPartyAppModule { }

@@ -22,7 +22,7 @@ app.use('/api', rtsIndex);
 
 
 //const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://user-1:<ucscprj_3>@somiru-restaurant-cluster-pkdq6.mongodb.net/test?retryWrites=true";
+const uri = "mongodb+srv://user-1:<grpprj_3>@somiru-restaurant-cluster-pkdq6.mongodb.net/test?retryWrites=true";
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
   //const collection = client.db("test").collection("devices");
