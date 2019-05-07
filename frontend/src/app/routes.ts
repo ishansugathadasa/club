@@ -10,20 +10,31 @@ import { CustomerIndexComponent } from './user/customer/customer-index/customer-
 import { AboutUsComponent } from './user/customer/about-us/about-us.component';
 import { GalleryComponent } from './user/customer/gallery/gallery.component';
 import { ReservationComponent } from './user/customer/reservation/reservation.component';
+import { InstructorComponent } from './user/instructor/instructor.component';
+import { InsHistoryComponent } from './user/instructor/component/ins-history/ins-history.component';
 export const appRoutes: Routes = [
     {
-        path: 'customer', component: UserComponent,
-        children: [{ path: '', component: CustomerComponent }]
+        path: 'customer', component: CustomerComponent,
+        children: [{ path: '', component: UserComponent }]
     },
     {
-        path: 'login', component: LoginComponent
-       
+        path: 'instructor', component: UserComponent,
+        children: [{ path: '', component: InstructorComponent }]
+    },
+    {
+        path: 'history', component: UserComponent,
+        children: [{ path: '', component: InsHistoryComponent }]
+    },
+    {
+        path: 'login', component: LoginComponent,
+        children: [{ path: '', component:  LoginComponent }]
     },
     {
         path: 'cashier', component: CashierComponent
     },
     {
-        path: 'customer-index', component: CustomerIndexComponent
+        path: 'customer-index', component: CustomerIndexComponent,
+        children: [{ path: '', component: CustomerComponent }]
     },
     {
         path: 'about-us', component: AboutUsComponent
