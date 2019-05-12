@@ -59,7 +59,8 @@ import { TableBookingComponent } from './user/cashier/table-booking/table-bookin
 import { InstructorComponent } from './user/instructor/instructor.component';
 import { InsNavBarComponent } from './user/instructor/component/ins-nav-bar/ins-nav-bar.component';
 import { InsHistoryComponent } from './user/instructor/component/ins-history/ins-history.component';
-
+import { InsAssignDetailsComponent } from './user/instructor/component/ins-assign-details/ins-assign-details.component';
+//import {InstructorFilterPipe } from './user/instructor/component/ins-history/ins_history_filter.pipe';
 
 @NgModule({
   declarations: [
@@ -89,7 +90,9 @@ import { InsHistoryComponent } from './user/instructor/component/ins-history/ins
     TableBookingComponent,
     InstructorComponent,
     InsNavBarComponent,
-    InsHistoryComponent
+    InsHistoryComponent,
+    InsAssignDetailsComponent,
+    
   ],
   imports: [
     BrowserModule,

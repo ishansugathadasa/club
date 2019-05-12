@@ -12,6 +12,8 @@ import { GalleryComponent } from './user/customer/gallery/gallery.component';
 import { ReservationComponent } from './user/customer/reservation/reservation.component';
 import { InstructorComponent } from './user/instructor/instructor.component';
 import { InsHistoryComponent } from './user/instructor/component/ins-history/ins-history.component';
+import { InsAssignDetailsComponent } from './user/instructor/component/ins-assign-details/ins-assign-details.component';
+
 export const appRoutes: Routes = [
     {
         path: 'customer', component: CustomerComponent,
@@ -24,6 +26,10 @@ export const appRoutes: Routes = [
     {
         path: 'history', component: UserComponent,
         children: [{ path: '', component: InsHistoryComponent }]
+    },
+    {
+        path: 'assign', component: UserComponent,
+        children: [{ path: '', component: InsAssignDetailsComponent }]
     },
     {
         path: 'login', component: LoginComponent,

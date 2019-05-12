@@ -1,0 +1,32 @@
+<app-back-nav></app-back-nav>
+<div class="column1">
+<app-ins-nav-bar></app-ins-nav-bar>
+</div>
+<div class="column1">
+<div class="main">
+    <div class="row" >
+      <div class="column" *ngFor="let ins of UserProfileService.history">
+        <mat-card class="example-card">
+          <mat-card-header>
+           <!-- <div mat-card-avatar class="example-header-image"></div>-->
+            <mat-card-title>SOMIRU</mat-card-title>
+            <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+          </mat-card-header>
+          {{ins.customer_name}}
+          <!--<img mat-card-image src="./assets/cake.jpg" alt="Photo of a Shiba Inu" height="400" width="200">-->
+          <mat-card-content>
+            <p>
+              {{ins.tel}}<br>
+              {{ins.date}}<br>
+              {{ins.time}}<br>
+            </p>
+          </mat-card-content>
+          <!--<mat-card-actions>-->
+            <!--<button class="button mat-button">CANCEL</button>-->
+          <!--</mat-card-actions>-->
+        </mat-card>
+      </div>
+      </div></div></div>
+<!--<app-ins-nav-bar></app-ins-nav-bar>-->
+<!-- import footer comonent -->
+<app-footer></app-footer>
