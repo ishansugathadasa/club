@@ -20,8 +20,9 @@
 		</div>
 		<br>
 		<div class="login">
-			<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-					<input type="text" name="email" #user="ngModel" [(ngModel)]="model.email" placeholder="email" required>
+			<form #loginForm="ngForm" (ngSubmit)="onSubmit(model.email,loginForm)">
+				  <input type="hidden" name="username" #username="ngModel" [(ngModel)]="model.username">
+					<input type="text" name="email" #email="ngModel" [(ngModel)]="model.email" placeholder="email" required>
 			    <input type="password" name="password" #password="ngModel" [(ngModel)]="model.password" placeholder="Password" required minlength="4">
 				
 				<input type="submit" value="Login">

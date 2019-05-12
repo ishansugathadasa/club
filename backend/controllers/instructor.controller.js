@@ -5,7 +5,9 @@ const _ = require('lodash');
 
 module.exports.enter_history = (req, res, next) => {
     var user = new User();
-    user.title = req.body.title;
+    user.customer_name = req.body.customer_name;
+    user.tel = req.body.tel;
+    user.instructor = req.body.instructor;
     user.date = req.body.date;
     user.time = req.body.time;
     user.save((err, doc) => {
@@ -24,7 +26,16 @@ module.exports.enter_history = (req, res, next) => {
 module.exports.view_history = (req, res, next) => {
     User.find((err, docs) => {
         if(!err) {res.send(docs); }
-        else {console.log('Error in Retriving Driver :' + JSON.stringify(err, undefined, 2));}
+        else {console.log('Error in Retriving User :' + JSON.stringify(err, undefined, 2));}
+    });
+
+
+
+}
+module.exports.view_person_history = (req, res, next) => {
+    User.find({instructor:req.params.instructor},(err, docs) => {
+        if(!err) {res.send(docs); }
+        else {console.log('Error in Retriving User :' + JSON.stringify(err, undefined, 2));}
     });
 
 
