@@ -16,6 +16,9 @@ import { appRoutes } from './routes';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatCardModule} from '@angular/material';
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 import {
   MatButtonModule,
@@ -31,7 +34,7 @@ import {
   MatSidenavModule,
   MatStepperModule,
   MatRadioModule,
-  MatListModule
+
 } from '@angular/material';
 import { CashierComponent } from './user/cashier/cashier.component';
 import { CustomerIndexComponent } from './user/customer/customer-index/customer-index.component';
@@ -53,6 +56,7 @@ import { BackNavComponent } from './shared/components/back-nav/back-nav.componen
 import { ResReservationComponent } from './user/cashier/res-reservation/res-reservation.component';
 import { SportsComponent } from './user/cashier/sports/sports.component';
 import { TableBookingComponent } from './user/cashier/table-booking/table-booking.component';
+
 import { PersonalDetailsComponent } from './user/customer/reservation/components/personal-details/personal-details.component';
 import { TableBookComponent } from './user/customer/reservation/components/table-book/table-book.component';
 import { HallBookComponent } from './user/customer/reservation/components/hall-book/hall-book.component';
@@ -61,6 +65,13 @@ import { OrderDetailsComponent } from './user/customer/reservation/components/or
 import { SwimmingPoolBookingComponent } from './user/customer/reservation/components/swimming-pool-booking/swimming-pool-booking.component';
 import { CompleteOrderComponent } from './user/customer/reservation/components/complete-order/complete-order.component';
 import { MenuComponent } from './user/customer/menu/menu.component';
+
+
+import { InstructorComponent } from './user/instructor/instructor.component';
+import { InsNavBarComponent } from './user/instructor/component/ins-nav-bar/ins-nav-bar.component';
+import { InsHistoryComponent } from './user/instructor/component/ins-history/ins-history.component';
+import { InsAssignDetailsComponent } from './user/instructor/component/ins-assign-details/ins-assign-details.component';
+//import {InstructorFilterPipe } from './user/instructor/component/ins-history/ins_history_filter.pipe';
 
 
 @NgModule({
@@ -96,13 +107,19 @@ import { MenuComponent } from './user/customer/menu/menu.component';
     OrderDetailsComponent,
     SwimmingPoolBookingComponent,
     CompleteOrderComponent,
-    MenuComponent
+    MenuComponent,
+    InstructorComponent,
+    InsNavBarComponent,
+    InsHistoryComponent,
+    InsAssignDetailsComponent,
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     MatButtonModule, 
     MatCheckboxModule,
     MatInputModule,
@@ -121,6 +138,7 @@ import { MenuComponent } from './user/customer/menu/menu.component';
     ReactiveFormsModule,
     MatRadioModule,
     MatListModule,
+    MatCardModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
