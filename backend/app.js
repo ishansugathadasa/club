@@ -22,6 +22,7 @@ app.use(passport.initialize());
 //app.use('/authenticate', usercontroller);
  
 // start server
+
 app.listen(process.env.PORT, () => console.log(`Server started at port : ${process.env.PORT}`));
 
 

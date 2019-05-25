@@ -11,7 +11,8 @@
       .colorlib-nav {
         margin: 0; } }
     .colorlib-nav .top-menu {
-      padding: 0px 0px; }
+      background-color: #800903;
+      padding: 15px 15px; }
       @media screen and (max-width: 768px) {
         .colorlib-nav .top-menu {
           padding: 28px 1em; } }

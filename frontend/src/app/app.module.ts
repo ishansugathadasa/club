@@ -34,7 +34,7 @@ import {
   MatSidenavModule,
   MatStepperModule,
   MatRadioModule,
-  
+
 } from '@angular/material';
 import { CashierComponent } from './user/cashier/cashier.component';
 import { CustomerIndexComponent } from './user/customer/customer-index/customer-index.component';
@@ -56,11 +56,23 @@ import { BackNavComponent } from './shared/components/back-nav/back-nav.componen
 import { ResReservationComponent } from './user/cashier/res-reservation/res-reservation.component';
 import { SportsComponent } from './user/cashier/sports/sports.component';
 import { TableBookingComponent } from './user/cashier/table-booking/table-booking.component';
+
+import { PersonalDetailsComponent } from './user/customer/reservation/components/personal-details/personal-details.component';
+import { TableBookComponent } from './user/customer/reservation/components/table-book/table-book.component';
+import { HallBookComponent } from './user/customer/reservation/components/hall-book/hall-book.component';
+import { FoodOrderComponent } from './user/customer/reservation/components/food-order/food-order.component';
+import { OrderDetailsComponent } from './user/customer/reservation/components/order-details/order-details.component';
+import { SwimmingPoolBookingComponent } from './user/customer/reservation/components/swimming-pool-booking/swimming-pool-booking.component';
+import { CompleteOrderComponent } from './user/customer/reservation/components/complete-order/complete-order.component';
+import { MenuComponent } from './user/customer/menu/menu.component';
+
+
 import { InstructorComponent } from './user/instructor/instructor.component';
 import { InsNavBarComponent } from './user/instructor/component/ins-nav-bar/ins-nav-bar.component';
 import { InsHistoryComponent } from './user/instructor/component/ins-history/ins-history.component';
 import { InsAssignDetailsComponent } from './user/instructor/component/ins-assign-details/ins-assign-details.component';
 //import {InstructorFilterPipe } from './user/instructor/component/ins-history/ins_history_filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -88,6 +100,14 @@ import { InsAssignDetailsComponent } from './user/instructor/component/ins-assig
     ResReservationComponent,
     SportsComponent,
     TableBookingComponent,
+    PersonalDetailsComponent,
+    TableBookComponent,
+    HallBookComponent,
+    FoodOrderComponent,
+    OrderDetailsComponent,
+    SwimmingPoolBookingComponent,
+    CompleteOrderComponent,
+    MenuComponent,
     InstructorComponent,
     InsNavBarComponent,
     InsHistoryComponent,
@@ -117,6 +137,7 @@ import { InsAssignDetailsComponent } from './user/instructor/component/ins-assig
     MatStepperModule,
     ReactiveFormsModule,
     MatRadioModule,
+    MatListModule,
     MatCardModule,
     RouterModule.forRoot(appRoutes)
   ],
