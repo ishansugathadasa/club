@@ -1,0 +1,22 @@
+<!-- import main navigation component -->
+<app-back-nav></app-back-nav>
+
+<div id="colorlib-contact">
+        <div class="container">
+            
+            <div class="row">
+                    <mat-grid-list cols="4" rowHeight="100px">
+                        <mat-grid-tile
+                            *ngFor="let tile of tiles"
+                            [colspan]="tile.cols"
+                            [rowspan]="tile.rows"
+                            [style.background]="tile.color">
+                            {{tile.text}}
+                        </mat-grid-tile>
+                    </mat-grid-list>
+            </div>    
+        </div>
+    </div>
+          
+    <!-- import footer component -->
+    <app-footer></app-footer>
