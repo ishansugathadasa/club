@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const User = mongoose.model('History');
 const Instructor = mongoose.model('Instructor');
+var ObjectId =require('mongoose').Types.ObjectId;
 const passport = require('passport');
 const _ = require('lodash');
 const pass="1234"
@@ -62,4 +63,43 @@ module.exports.register_instructor = (req, res, next) => {
                 
         }
     });
+}
+
+module.exports.update_instructor = (req, res, next) => {
+    if(!ObjectId.isValid(req.params.id))
+      return res.status(400).send('No record with given id : ${req.params.id}');
+    
+    var ins ={
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        address: req.body.address,
+        email: req.body.email,
+        
+    };
+    Instructor.findByIdAndUpdate(req.params.id, { $set: ins},{ new: true},(err,doc) => {
+        if(!err) { res.send(doc); }
+        else {console.log('Error in instructor Update :' + JSON.stringify(err, undefined, 2)); }
+    });
+
+
+}
+module.exports.delete_instructor = (req, res, next) => {
+    if(!ObjectId.isValid(req.params.id))
+    return res.status(400).send('No record with given id : ${req.params.id}');   
+    
+   Instructor.findByIdAndRemove(req.params.id, (err, doc) => {
+     if(!err) { res.send(doc); }
+     else {console.log('Error in instructor Delete :' + JSON.stringify(err, undefined, 2)); }
+
+ });
+
+}
+module.exports.view_instructor = (req, res, next) => {
+    Instructor.find((err, docs) => {
+        if(!err) {res.send(docs); }
+        else {console.log('Error in Retriving User :' + JSON.stringify(err, undefined, 2));}
+    });
+
+
+
 }
