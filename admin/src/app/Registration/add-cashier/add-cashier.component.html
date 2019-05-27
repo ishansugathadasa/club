@@ -14,7 +14,7 @@
     
           <div class="page-content-wrap">              
               <div class="container">
-                  <form #CashierForm="ngForm" (ngSubmit)="onSubmit(CashierForm)">
+                  <form #CashierForm="ngForm">
                       <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="UserProfileService.selectCashier._id">
                     <div class="row">
                       <div class="col-25">
@@ -64,14 +64,46 @@
                           </div><br>
                           </div>
                         </div>
-                    <div class="row">
-                      <input type="submit" value="Submit">
+                        <div class="row">
+                          <input type="submit" value="Submit" (click)="onSubmit(CashierForm)">
+                          <input type="submit" value="Update" (click)="onUpdate(CashierForm)">
+                        </div>
+                      </form>
+                      <br><br>
+                      <table id="customers">
+                        <thead>
+                          <tr>
+                            <th>FirstName</th>
+                             <th>LastName</th>
+                             <th>Address</th>
+                             <th>Email</th>
+                             
+                             
+                             <th></th>
+                          </tr>
+                        </thead>
+                        <tr *ngFor="let ins of UserProfileService.cashier">
+                          <td>{{ins.firstname}}</td>
+                          <td>{{ins.lastname}}</td>
+                          <td>{{ins.address}}</td>
+                          <td>{{ins.email}}</td>
+                          
+                          
+                          <td>
+                              <a class="action-btn" >
+                                <i class="material-icons" (click)="onEdit(ins)">edit</i>
+                              </a>
+                              <a class="action-btn">
+                                <i class="material-icons" (click)="onDelete(ins._id,CashierForm)">delete</i>
+                              </a>
+                            </td>
+                        </tr>
+                      </table>
+                      
                     </div>
-                  </form>
-                </div>
-  
-          </div>                             
-      </div>            
-  </div>
-  
+      
+              </div>                             
+          </div>            
+      </div>
+      
 
