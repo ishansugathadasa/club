@@ -14,7 +14,7 @@
     
           <div class="page-content-wrap">              
               <div class="container">
-                  <form #CheffForm="ngForm" (ngSubmit)="onSubmit(CheffForm)">
+                  <form #CheffForm="ngForm">
                       <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="UserProfileService.selectCheff._id">
                     <div class="row">
                       <div class="col-25">
@@ -61,12 +61,45 @@
                           </div>
                         </div>
                     <div class="row">
-                      <input type="submit" value="Submit">
+                      <input type="submit" value="Submit" (click)="onSubmit(CheffForm)">
+                      <input type="submit" value="Update" (click)="onUpdate(CheffForm)">
                     </div>
                   </form>
+                  <br><br>
+                  <table id="customers">
+                    <thead>
+                      <tr>
+                        <th>FirstName</th>
+                         <th>LastName</th>
+                         <th>Address</th>
+                         <th>Email</th>
+                         
+                         
+                         <th></th>
+                      </tr>
+                    </thead>
+                    <tr *ngFor="let ins of UserProfileService.ceff">
+                      <td>{{ins.firstname}}</td>
+                      <td>{{ins.lastname}}</td>
+                      <td>{{ins.address}}</td>
+                      <td>{{ins.email}}</td>
+                      
+                      
+                      <td>
+                          <a class="action-btn" >
+                            <i class="material-icons" (click)="onEdit(ins)">edit</i>
+                          </a>
+                          <a class="action-btn">
+                            <i class="material-icons" (click)="onDelete(ins._id,CheffForm)">delete</i>
+                          </a>
+                        </td>
+                    </tr>
+                  </table>
+                  
                 </div>
   
           </div>                             
       </div>            
   </div>
+  
   
