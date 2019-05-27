@@ -1,0 +1,38 @@
+<div class="page-container">
+    
+  <!-- import slider component -->
+    <app-sidebar></app-sidebar>
+
+    <!-- PAGE CONTENT -->
+    <div class="page-content">
+        
+        <!-- import nav bar component -->
+        <app-navbar></app-navbar>
+                  
+        <!-- import breadcrumb component -->
+        <ul class="breadcrumb">
+            <li><a href="dashboard">Home</a></li>  
+            <li class="active">Upload Images</li>
+        </ul>
+  
+        <div class="page-content-wrap">
+            <!-- input here -->
+            <div class="row">
+
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-2">
+                <div id="userActions">
+                  <input type="file" id="fileUpload" />
+                </div>
+                <img id="imgPrime" src="" alt="uploaded image placeholder" />
+              </div>
+            </div>
+            
+
+            <script  src="assets/js/upload.js"></script>
+
+        </div>                             
+    </div>            
+</div>
