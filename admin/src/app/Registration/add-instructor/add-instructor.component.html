@@ -14,7 +14,7 @@
     
           <div class="page-content-wrap">              
               <div class="container">
-                  <form #InstructorForm="ngForm" (ngSubmit)="onSubmit(InstructorForm)">
+                  <form #InstructorForm="ngForm">
                       <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="UserProfileService.selectInstructor._id">
                     <div class="row">
                       <div class="col-25">
@@ -65,8 +65,8 @@
                           </div>
                         </div>
                     <div class="row">
-                      <input type="submit" value="Submit">
-                      
+                      <input type="submit" value="Submit" (click)="onSubmit(InstructorForm)">
+                      <input type="submit" value="Update" (click)="onUpdate(InstructorForm)">
                     </div>
                   </form>
                   <br><br>

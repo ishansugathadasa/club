@@ -36,48 +36,23 @@ export class AddInstructorComponent implements OnInit {
     
   }
 
-  onSubmit(form: NgForm) {
-    
-    if(form.value._id ==""){
-     
+  onSubmit(form : NgForm){
     this.UserProfileService.userpostInstructor(form.value).subscribe(
       res => {
-        alert('success');
         this.refreshInstructorList();
         this.resetForm(form);
-        //form.reset();
-        
-       
+        alert('sccess');
       },
       err => {
-        alert('error');
         if (err.status === 422) {
           this.serverErrorMessages = err.error.join('<br/>');
+          alert(this.serverErrorMessages);
         }
         else
-          this.serverErrorMessages = 'Something went wrong.';
+          //this.serverErrorMessages = 'Something went wrong.';
+          alert('error');
       }
     );
-    }
-    else{
-      
-      this.UserProfileService.putInstructor(form.value).subscribe(
-        res => {
-          
-          this.refreshInstructorList();
-          this.resetForm(form);
-        //form.reset();
-        },
-        err => {
-          if (err.status === 422) {
-            this.serverErrorMessages = err.error.join('<br/>');
-          }
-          else
-            this.serverErrorMessages = 'Something went wrong.';
-        }
-      );
-    }
-    
   }
   
   onEdit(ins : Instructor)
@@ -101,6 +76,24 @@ export class AddInstructorComponent implements OnInit {
     this.UserProfileService.getInstrutorList().subscribe((res)=> {
       this.UserProfileService.instructor= res as Instructor[];
     });
+  }
+  onUpdate(form : NgForm){
+    this.UserProfileService.putInstructor(form.value).subscribe(
+      res => {
+        
+        this.refreshInstructorList();
+        this.resetForm(form);
+        alert("sucess");
+      },
+      err => {
+        if (err.status === 422) {
+          this.serverErrorMessages = err.error.join('<br/>');
+        }
+        else
+          this.serverErrorMessages = 'Something went wrong.';
+      }
+    );
+
   }
   
 }

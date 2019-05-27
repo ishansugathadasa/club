@@ -53,3 +53,13 @@ module.exports.delete_cheff = (req, res, next) => {
  });
 
 }
+
+module.exports.view_cheff = (req, res, next) => {
+    User.find((err, docs) => {
+        if(!err) {res.send(docs); }
+        else {console.log('Error in Retriving User :' + JSON.stringify(err, undefined, 2));}
+    });
+
+
+
+}
