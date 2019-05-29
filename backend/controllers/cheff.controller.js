@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
 const User = mongoose.model('Cheff');
+const User1 = mongoose.model('User');
 var ObjectId =require('mongoose').Types.ObjectId;
 const passport = require('passport');
 const _ = require('lodash');
 const pass="1234"
+const type="cheff"
 
 module.exports.register_cheff = (req, res, next) => {
     var user = new User();
@@ -62,4 +64,22 @@ module.exports.view_cheff = (req, res, next) => {
 
 
 
+}
+module.exports.user_cheff_register = (req, res, next) => {
+    var user = new User1();
+    user.username = req.body.firstname;
+    user.email = req.body.email;
+    user.password = pass;
+    user.type = type;
+    user.save((err, doc) => {
+        if (!err)
+            res.send(doc);
+        else{
+            if (err.code == 11000)
+                res.status(422).send(['Duplicate Email Adress found.']);
+            else
+                return next(err);
+                
+        }
+    });
 }

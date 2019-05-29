@@ -36,22 +36,31 @@ export class AddCheffComponent implements OnInit {
   }
 
   onSubmit(form : NgForm){
-    this.UserProfileService.userpostCheff(form.value).subscribe(
-      res => {
-        this.refreshCheffList();
-        this.resetForm(form);
-        alert('sccess');
+    this.UserProfileService.userCheff(form.value).subscribe(
+      res=>{
+        this.UserProfileService.userpostCheff(form.value).subscribe(
+          res => {
+            this.refreshCheffList();
+            this.resetForm(form);
+            alert('sccess');
+          },
+          err => {
+            if (err.status === 422) {
+              this.serverErrorMessages = err.error.join('<br/>');
+              alert(this.serverErrorMessages);
+            }
+            else
+              //this.serverErrorMessages = 'Something went wrong.';
+              alert('error');
+          }
+        );
+        alert('success');
       },
-      err => {
-        if (err.status === 422) {
-          this.serverErrorMessages = err.error.join('<br/>');
-          alert(this.serverErrorMessages);
-        }
-        else
-          //this.serverErrorMessages = 'Something went wrong.';
-          alert('error');
+      err=>{
+        alert('error');
       }
-    );
+    )
+    
   }
   onEdit(ins : Cheff)
   { this.UserProfileService.selectCheff=ins;

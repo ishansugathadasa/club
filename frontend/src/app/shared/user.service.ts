@@ -10,7 +10,9 @@ export class UserService {
   selectedUser: User = {
     username: '',
     email: '',
-    password: ''
+    password: '',
+    type:'',
+    
   };
   readonly baseURL='http://localhost:3000/authenticate';
   constructor(private http: HttpClient) { }

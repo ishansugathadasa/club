@@ -13,6 +13,7 @@ export class CheffService {
   readonly baseURL1='http://localhost:3000/update_cheff';
   readonly baseURL2='http://localhost:3000/delete_cheff';
   readonly baseURL3='http://localhost:3000/view_cheff';
+  readonly baseURL4='http://localhost:3000/user_cheff_register';
   constructor(private http: HttpClient) { }
   userpostCheff(ins: Cheff){
     return this.http.post(this.baseURL,ins);
@@ -26,6 +27,9 @@ export class CheffService {
 }
   getCheffList(){
   return this.http.get(this.baseURL3);
+}
+  userCheff(ins: Cheff){
+  return this.http.post(this.baseURL4,ins);
 }
 
 
