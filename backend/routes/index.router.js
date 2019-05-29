@@ -32,5 +32,6 @@ router.post('/user_cashier_register',ctrlCashier.user_cashier_register);
 router.post('/ins_no',ctrlInstructor.ins_notification);
 router.post('/cheff_no',ctrlCheff.cheff_notification);
 router.post('/cashier_no',ctrlCashier.cashier_notification);
+router.get('/view_instructor_notification/:email',ctrlInstructor.view_instructor_notification);
 
 module.exports = router;

@@ -142,3 +142,12 @@ module.exports.ins_notification = (req, res, next) => {
         }
     });
 }
+module.exports.view_instructor_notification = (req, res, next) => {
+    Notification.find({email:req.params.email},(err, docs) => {
+        if(!err) {res.send(docs); }
+        else {console.log('Error in Retriving User :' + JSON.stringify(err, undefined, 2));}
+    });
+
+
+
+}

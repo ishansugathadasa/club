@@ -16,9 +16,10 @@
   display: table;
 }
 .example-card {
-  width: 300px;
-  height:200px;
+  width: 250px;
+  height:150px;
   font-family: "Comic Sans MS", Comic Sans, cursive;
+  margin-top:20px; 
 
   
 }
