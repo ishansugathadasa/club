@@ -24,7 +24,11 @@
 				  <input type="hidden" name="username" #username="ngModel" [(ngModel)]="model.username">
 					<input type="text" name="email" #email="ngModel" [(ngModel)]="model.email" placeholder="email" required>
 			    <input type="password" name="password" #password="ngModel" [(ngModel)]="model.password" placeholder="Password" required minlength="4">
-				
+				  <select id="type" name="type" #type="ngModel" [(ngModel)]="model.type" >
+						<option value="instructor">instructor</option>
+						<option value="cheff">cheff</option>
+						<option value="cashier">cashier</option>
+					</select>
 				<input type="submit" value="Login">
 				</form>
 		</div>

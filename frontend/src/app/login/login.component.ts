@@ -18,7 +18,8 @@ export class LoginComponent implements OnInit {
   model ={
     username:'',
     email :'',
-    password:''
+    password:'',
+    type:'',
   };
   emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   serverErrorMessages: string;
@@ -31,12 +32,26 @@ export class LoginComponent implements OnInit {
     console.log(email);
     this.userService.login(form.value).subscribe(
       res => {
+        if(form.value.type =="instructor")
+        {
         this.userService.setToken(res['token']);
         this.router.navigateByUrl('/instructor');
         this.HistoryService.setEmail(email);
-        this.tosatr.success('Login sucsessfully','Customer');
+        this.tosatr.success('Login sucsessfully','Instructor');
         //alert('sucess');
-      },
+      }else if(form.value.type =="cheff"){
+        this.userService.setToken(res['token']);
+        this.router.navigateByUrl('/cheff');
+        this.HistoryService.setEmail(email);
+        this.tosatr.success('Login sucsessfully','Cheff');
+      }
+      else{
+        this.userService.setToken(res['token']);
+        this.router.navigateByUrl('/cashier');
+        this.HistoryService.setEmail(email);
+        this.tosatr.success('Login sucsessfully','Cashier');
+      }
+    },
       err => {
         this.serverErrorMessages = err.error.message;
         this.tosatr.warning(this.serverErrorMessages,'Customer');

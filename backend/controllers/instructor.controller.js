@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
 const User = mongoose.model('History');
 const Instructor = mongoose.model('Instructor');
+const User1 = mongoose.model('User');
 var ObjectId =require('mongoose').Types.ObjectId;
 const passport = require('passport');
 const _ = require('lodash');
 const pass="1234"
+const type="instructor"
 
 module.exports.enter_history = (req, res, next) => {
     var user = new User();
@@ -102,4 +104,22 @@ module.exports.view_instructor = (req, res, next) => {
 
 
 
+}
+module.exports.user_ins_register = (req, res, next) => {
+    var user = new User1();
+    user.username = req.body.firstname;
+    user.email = req.body.email;
+    user.password = pass;
+    user.type = type;
+    user.save((err, doc) => {
+        if (!err)
+            res.send(doc);
+        else{
+            if (err.code == 11000)
+                res.status(422).send(['Duplicate Email Adress found.']);
+            else
+                return next(err);
+                
+        }
+    });
 }

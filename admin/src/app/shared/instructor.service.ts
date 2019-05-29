@@ -13,6 +13,7 @@ export class InstructorService {
   readonly baseURL1='http://localhost:3000/update_instructor';
   readonly baseURL2='http://localhost:3000/delete_instructor';
   readonly baseURL3='http://localhost:3000/view_instructor';
+  readonly baseURL4='http://localhost:3000/user_ins_register';
   constructor(private http: HttpClient) { }
 
   userpostInstructor(ins: Instructor){
@@ -27,6 +28,9 @@ export class InstructorService {
 }
   getInstrutorList(){
   return this.http.get(this.baseURL3);
+}
+  userInstructor(ins: Instructor){
+  return this.http.post(this.baseURL4,ins);
 }
 
 }

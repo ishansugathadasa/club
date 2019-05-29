@@ -3,6 +3,7 @@ import { UserComponent } from './user/user.component';
 import { CustomerComponent } from './user/customer/customer.component';
 import { LoginComponent } from './login/login.component';
 import { CashierComponent } from './user/cashier/cashier.component';
+import { CheffComponent } from './user/cheff/cheff.component';
 import { ResReservationComponent } from './user/cashier/res-reservation/res-reservation.component';
 import { SportsComponent } from './user/cashier/sports/sports.component';
 import { TableBookingComponent } from './user/cashier/table-booking/table-booking.component';
@@ -39,6 +40,9 @@ export const appRoutes: Routes = [
     },
     {
         path: 'cashier', component: CashierComponent
+    },
+    {
+        path: 'cheff', component: CheffComponent
     },
     {
         path: 'customer-index', component: CustomerIndexComponent,

@@ -37,23 +37,31 @@ export class AddInstructorComponent implements OnInit {
   }
 
   onSubmit(form : NgForm){
-    this.UserProfileService.userpostInstructor(form.value).subscribe(
-      res => {
-        this.refreshInstructorList();
-        this.resetForm(form);
-        alert('sccess');
+    this.UserProfileService.userInstructor(form.value).subscribe(
+      res=>{
+        this.UserProfileService.userpostInstructor(form.value).subscribe(
+          res => {
+            this.refreshInstructorList();
+            this.resetForm(form);
+            alert('sccess');
+          },
+          err => {
+            if (err.status === 422) {
+              this.serverErrorMessages = err.error.join('<br/>');
+              alert(this.serverErrorMessages);
+            }
+            else
+              //this.serverErrorMessages = 'Something went wrong.';
+              alert('error');
+          }
+        );
+        alert('success');
       },
-      err => {
-        if (err.status === 422) {
-          this.serverErrorMessages = err.error.join('<br/>');
-          alert(this.serverErrorMessages);
-        }
-        else
-          //this.serverErrorMessages = 'Something went wrong.';
-          alert('error');
+      err=>{
+        alert('error');
       }
-    );
-  }
+    )
+    }
   
   onEdit(ins : Instructor)
   { this.UserProfileService.selectInstructor=ins;

@@ -26,4 +26,7 @@ router.delete('/delete_instructor/:id',ctrlInstructor.delete_instructor);
 router.get('/view_instructor',ctrlInstructor.view_instructor);
 router.get('/view_cheff',ctrlCheff.view_cheff);
 router.get('/view_cashier',ctrlCashier.view_cashier);
+router.post('/user_ins_register',ctrlInstructor.user_ins_register);
+router.post('/user_cheff_register',ctrlCheff.user_cheff_register);
+router.post('/user_cashier_register',ctrlCashier.user_cashier_register);
 module.exports = router;

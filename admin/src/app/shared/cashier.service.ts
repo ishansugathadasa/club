@@ -13,6 +13,7 @@ export class CashierService {
   readonly baseURL1='http://localhost:3000/update_cashier';
   readonly baseURL2='http://localhost:3000/delete_cashier';
   readonly baseURL3='http://localhost:3000/view_cashier';
+  readonly baseURL4='http://localhost:3000/user_cashier_register';
   constructor(private http: HttpClient) { }
   userpostCashier(ins: Cashier){
     return this.http.post(this.baseURL,ins);
@@ -26,5 +27,8 @@ export class CashierService {
 }
   getCashierList(){
   return this.http.get(this.baseURL3);
+}
+  userCashier(ins: Cashier){
+  return this.http.post(this.baseURL4,ins);
 }
 }
