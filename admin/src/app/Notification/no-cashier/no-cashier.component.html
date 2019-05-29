@@ -14,13 +14,17 @@
   
         <div class="page-content-wrap">              
           <div class="container">
-            <form action="/action_page.php">
+            <form #CashierForm="ngForm" (ngSubmit)="CashierForm.valid && onSubmit(CashierForm)">
             <div class="row">
               <div class="col-25">
                 <label for="fname">Title</label>
               </div>
               <div class="col-75">
-                <input type="text" id="fname" name="firstname" placeholder="title">
+                <input type="text" name="title" #title="ngModel" [(ngModel)]="UserProfileService.selectNotification.title" placeholder="title" 
+                  required [ngClass]="{'invalid-textbox' :CashierForm.submitted && !title.valid }">
+                  <div *ngIf="CashierForm.submitted && !title.valid">
+                  <label class="validation-message">This field is required.</label>
+                  </div><br>
               </div>
             </div>
             <div class="row">
@@ -28,7 +32,11 @@
                 <label for="lname">Email</label>
               </div>
               <div class="col-75">
-                <input type="text" id="lname" name="lastname" placeholder="email">
+                <input type="text" name="email" #email="ngModel" [(ngModel)]="UserProfileService.selectNotification.email" placeholder="email" 
+                  required [ngClass]="{'invalid-textbox' :CashierForm.submitted && !email.valid }">
+                  <div *ngIf="CashierForm.submitted && !email.valid">
+                  <label class="validation-message">This field is required.</label>
+                  </div><br>
               </div>
             </div>
             
@@ -37,7 +45,11 @@
                 <label for="subject">Message</label>
               </div>
               <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <textarea name="message" #message="ngModel" [(ngModel)]="UserProfileService.selectNotification.message" placeholder="Write something.." 
+                required [ngClass]="{'invalid-textbox' :CashierForm.submitted && !message.valid }" style="height:200px"></textarea>
+                <div *ngIf="CashierForm.submitted && !message.valid">
+                  <label class="validation-message">This field is required.</label>
+                  </div><br>
               </div>
             </div>
             <div class="row">

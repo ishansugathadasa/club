@@ -83,3 +83,7 @@
     background-color: #4CAF50;
     color: white;
   }
+  label.validation-message{
+    color:#ed5558;
+    font-size:10px;
+  }
