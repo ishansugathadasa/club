@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const User = mongoose.model('History');
 const Instructor = mongoose.model('Instructor');
 const User1 = mongoose.model('User');
+const Notification = mongoose.model('Notification');
 var ObjectId =require('mongoose').Types.ObjectId;
 const passport = require('passport');
 const _ = require('lodash');
@@ -122,4 +123,31 @@ module.exports.user_ins_register = (req, res, next) => {
                 
         }
     });
+}
+
+module.exports.ins_notification = (req, res, next) => {
+    var user = new Notification();
+    user.title = req.body.title;
+    user.email = req.body.email;
+    user.message = req.body.message;
+    user.save((err, doc) => {
+        if (!err)
+            res.send(doc);
+        else{
+            if (err.code == 11000)
+                res.status(422).send(['Duplicate Email Adress found.']);
+            else
+                return next(err);
+                
+        }
+    });
+}
+module.exports.view_instructor_notification = (req, res, next) => {
+    Notification.find({email:req.params.email},(err, docs) => {
+        if(!err) {res.send(docs); }
+        else {console.log('Error in Retriving User :' + JSON.stringify(err, undefined, 2));}
+    });
+
+
+
 }

@@ -1,0 +1,28 @@
+<app-back-nav></app-back-nav>
+<div class="column1">
+<app-ins-nav-bar></app-ins-nav-bar>
+</div>
+<div class="column1">
+<div class="main">
+    <div class="row" >
+      <div class="column" *ngFor="let ins of UserProfileService.notification">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <!--<img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">-->
+              <p>Somiru Restuarant</p> 
+            </div>
+            <div class="flip-card-back">
+                <p>{{ins.title}}</p> 
+              <h1>{{ins.message}}</h1> 
+              <!--<p>Architect & Engineer</p>--> 
+              <!--<p>We love that guy</p>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      </div></div></div>
+<!--<app-ins-nav-bar></app-ins-nav-bar>-->
+<!-- import footer comonent -->
+<app-footer></app-footer>
+

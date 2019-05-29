@@ -6,6 +6,9 @@ import { ImageComponent } from './pages/image/image.component';
 import { AddInstructorComponent } from './Registration/add-instructor/add-instructor.component';
 import { AddCheffComponent } from './Registration/add-cheff/add-cheff.component';
 import { AddCashierComponent } from './Registration/add-cashier/add-cashier.component';
+import { NoInstructorComponent } from './Notification/no-instructor/no-instructor.component';
+import { NoCheffComponent } from './Notification/no-cheff/no-cheff.component';
+import { NoCashierComponent } from './Notification/no-cashier/no-cashier.component';
 
 export const appRoutes: Routes = [
     {
@@ -30,6 +33,18 @@ export const appRoutes: Routes = [
     },
     {
         path: 'login', component: LoginComponent
+       
+    },
+    {
+        path: 'notification/instructor', component: NoInstructorComponent
+       
+    },
+    {
+        path: 'notification/cheff', component: NoCheffComponent
+       
+    },
+    {
+        path: 'notification/cashier', component: NoCashierComponent
        
     },
     {

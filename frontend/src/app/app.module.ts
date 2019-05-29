@@ -73,6 +73,7 @@ import { InsNavBarComponent } from './user/instructor/component/ins-nav-bar/ins-
 import { InsHistoryComponent } from './user/instructor/component/ins-history/ins-history.component';
 import { InsAssignDetailsComponent } from './user/instructor/component/ins-assign-details/ins-assign-details.component';
 import { CheffComponent } from './user/cheff/cheff.component';
+import { InsNotificationComponent } from './user/instructor/component/ins-notification/ins-notification.component';
 //import {InstructorFilterPipe } from './user/instructor/component/ins-history/ins_history_filter.pipe';
 
 
@@ -115,6 +116,7 @@ import { CheffComponent } from './user/cheff/cheff.component';
     InsHistoryComponent,
     InsAssignDetailsComponent,
     CheffComponent,
+    InsNotificationComponent,
     
   ],
   imports: [
