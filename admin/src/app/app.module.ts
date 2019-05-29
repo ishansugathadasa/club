@@ -28,6 +28,9 @@ import { AddInstructorComponent } from './Registration/add-instructor/add-instru
 import { AddCheffComponent } from './Registration/add-cheff/add-cheff.component';
 import { AddCashierComponent } from './Registration/add-cashier/add-cashier.component';
 import { InsSideBarComponent } from './Registration/add-instructor/component/ins-side-bar/ins-side-bar.component';
+import { NoInstructorComponent } from './Notification/no-instructor/no-instructor.component';
+import { NoCheffComponent } from './Notification/no-cheff/no-cheff.component';
+import { NoCashierComponent } from './Notification/no-cashier/no-cashier.component';
 // import { MatFileUploadModule } from 'angular-material-fileupload';
 
 @NgModule({
@@ -45,7 +48,10 @@ import { InsSideBarComponent } from './Registration/add-instructor/component/ins
     AddInstructorComponent,
     AddCheffComponent,
     AddCashierComponent,
-    InsSideBarComponent
+    InsSideBarComponent,
+    NoInstructorComponent,
+    NoCheffComponent,
+    NoCashierComponent
   ],
   imports: [
     BrowserModule,

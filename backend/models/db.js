@@ -15,3 +15,4 @@ require('./ins_history');
 require('./instructor');
 require('./cashier');
 require('./cheff');
+require('./notification');

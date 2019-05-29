@@ -29,4 +29,8 @@ router.get('/view_cashier',ctrlCashier.view_cashier);
 router.post('/user_ins_register',ctrlInstructor.user_ins_register);
 router.post('/user_cheff_register',ctrlCheff.user_cheff_register);
 router.post('/user_cashier_register',ctrlCashier.user_cashier_register);
+router.post('/ins_no',ctrlInstructor.ins_notification);
+router.post('/cheff_no',ctrlCheff.cheff_notification);
+router.post('/cashier_no',ctrlCashier.cashier_notification);
+
 module.exports = router;
